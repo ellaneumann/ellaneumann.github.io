@@ -4,5 +4,3 @@
 
 layout: home
 ---
-
-# Bold test for you <3

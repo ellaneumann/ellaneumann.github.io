@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Community, Climate, Coding"
+title:  Community, Climate, Coding
 ---
 Hey there, thank you for perusing my site!
 

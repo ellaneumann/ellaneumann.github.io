@@ -2,7 +2,7 @@
 layout: post
 title:  "Community, Climate, Coding"
 ---
-Hey there, thank you for pursuing my site!
+Hey there, thank you for perusing my site!
 
 I am passionate about the impacts of computing on society and the environment. By this, I mean how technology positively and negatively impacts the world. Let's take a walk down memory lane and get a little bit deep. Think about your connection to technology. The times that you have felt sucked in like a vortex, the times that you have been liberated, the times that you have felt annoyed. Your time is valuable, so it is important to know when applications are using you, rather than you using them. Maybe you are thinking that I sound a bit crazy right now. Well good, because it is a crazy concept that we have created these tools with glowing screens that we can create powerful tools with. These powerful tools are not to be taken lightly. 
 

@@ -1,7 +1,6 @@
 ---
-layout: page
+layout: default
 title: CSV
-permalink: /csv/
 ---
 
 #### WORK EXPERIENCE 

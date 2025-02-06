@@ -98,6 +98,57 @@
 						<li>Modify the text, links, and images to personalize your site.</li>
 						<li>Commit changes to update your website live!</li>
 					</ul>
+
+					<h1>How to Connect a Squarespace Domain to a GitHub Pages Site</h1>
+    
+					<h2>Step 1: Get Your GitHub Pages URL</h2>
+					<p>If you're using a user site, your URL will be:</p>
+					<pre>https://yourusername.github.io</pre>
+					<p>If it's a project site, it will be:</p>
+					<pre>https://yourusername.github.io/repository-name</pre>
+				
+					<h2>Step 2: Set Up a Custom Domain in GitHub</h2>
+					<ol>
+						<li>Go to your repository on GitHub.</li>
+						<li>Navigate to <strong>Settings &gt; Pages</strong>.</li>
+						<li>Under "Custom domain," enter your Squarespace domain (e.g., <code>www.yourdomain.com</code>).</li>
+						<li>Click <strong>Save</strong>. GitHub will provide the necessary DNS records.</li>
+					</ol>
+				
+					<h2>Step 3: Update DNS Records in Squarespace</h2>
+					<ol>
+						<li>Log in to your Squarespace account.</li>
+						<li>Navigate to <strong>Settings &gt; Domains</strong> and select your domain.</li>
+						<li>Click <strong>DNS Settings</strong>.</li>
+						<li>Add the following DNS records:</li>
+					</ol>
+				
+					<h3>A Records (For apex domain, <code>yourdomain.com</code>)</h3>
+					<pre>
+				Host: @
+				Value: 185.199.108.153
+				Host: @
+				Value: 185.199.109.153
+				Host: @
+				Value: 185.199.110.153
+				Host: @
+				Value: 185.199.111.153
+					</pre>
+					
+					<h3>CNAME Record (For <code>www.yourdomain.com</code>)</h3>
+					<pre>
+				Host: www
+				Value: yourusername.github.io
+					</pre>
+				
+					<h2>Step 4: Enforce HTTPS on GitHub</h2>
+					<ol>
+						<li>In <strong>GitHub Pages settings</strong>, check the box <strong>"Enforce HTTPS"</strong> after the DNS updates are applied.</li>
+					</ol>
+				
+					<h2>Step 5: Wait for DNS Propagation</h2>
+					<p>It may take <strong>a few hours to 48 hours</strong> for DNS changes to propagate.</p>
+					<p>Once complete, visiting your Squarespace domain should now load your GitHub Pages site.</p>
 					<!-- <p>First, please enjoy this watercolored Northern Flicker if you are viewing this site from your computer. If not, this majestic bird will be covered up by this text box unfortunately. This is one of my favorite birds.</p>
 					<p>I am passionate about community-building, climate action, coding, and creating art.</p>
 					<p>My 9-5: I am the data manager at the Sitka Sound Science Center (SSSC), a research field station in Sitka, Alaska. I am grateful to work with a wonderful team of community leaders, scientists, and researchers. I create data visualization products and develop and maintain data management infrastructure including the SSSC GitHub Organization. My project team is working on reducing landslide risk in Southeast Alaska through increasing coordination.</p>

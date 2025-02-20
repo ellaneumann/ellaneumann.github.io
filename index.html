@@ -99,6 +99,7 @@
 						<li>Commit changes to update your website live!</li>
 					</ul>
 
+					<div class="navbar">Navigation Bar</div>
 					<h2>Leave a Comment</h2>
 					<textarea id="commentInput" class="comment-box" rows="4" placeholder="Write your comment..."></textarea><br>
 					<button onclick="addComment()">Post Comment</button>
@@ -108,20 +109,42 @@
 					</div>
 					
 					<script>
+						document.addEventListener("DOMContentLoaded", loadComments);
+				
 						function addComment() {
 							var commentText = document.getElementById("commentInput").value;
 							if (commentText.trim() === "") {
 								alert("Please enter a comment.");
 								return;
 							}
-							var commentSection = document.getElementById("commentsSection");
-							var newComment = document.createElement("div");
-							newComment.className = "comment";
-							newComment.textContent = commentText;
-							commentSection.appendChild(newComment);
+							var comments = JSON.parse(localStorage.getItem("comments")) || [];
+							comments.push(commentText);
+							localStorage.setItem("comments", JSON.stringify(comments));
+							displayComments();
 							document.getElementById("commentInput").value = "";
 						}
+				
+						function loadComments() {
+							displayComments();
+						}
+				
+						function displayComments() {
+							var comments = JSON.parse(localStorage.getItem("comments")) || [];
+							var commentSection = document.getElementById("commentsSection");
+							commentSection.innerHTML = "<h3>Comments</h3>";
+							comments.forEach(comment => {
+								var newComment = document.createElement("div");
+								newComment.className = "comment";
+								newComment.textContent = comment;
+								commentSection.appendChild(newComment);
+							});
+						}
 					</script>
+					<!-- <p>First, please enjoy this watercolored Northern Flicker if you are viewing this site from your computer. If not, this majestic bird will be covered up by this text box unfortunately. This is one of my favorite birds.</p>
+					<p>I am passionate about community-building, climate action, coding, and creating art.</p>
+					<p>My 9-5: I am the data manager at the Sitka Sound Science Center (SSSC), a research field station in Sitka, Alaska. I am grateful to work with a wonderful team of community leaders, scientists, and researchers. I create data visualization products and develop and maintain data management infrastructure including the SSSC GitHub Organization. My project team is working on reducing landslide risk in Southeast Alaska through increasing coordination.</p>
+					-->
+				</div>
 			</section>
 
 		<!-- Two -->

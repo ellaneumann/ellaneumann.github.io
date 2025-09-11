@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <!--
-	html5up.net | @ajlkn
+	Original format adapted from html5up.net | @ajlkn and iterated upon with ChatGPT and coding by Ella Neumann
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
@@ -29,6 +29,37 @@
             border-radius: 50%;
             object-fit: cover;
         }
+		:root {
+  			--bg: #0b0f19;
+  			--card: #121826;
+			--text: #e6edf6;
+  			--muted: #9fb0c9;
+			--accent: #f8cce2; /* light pink */
+			--accent-strong: #ff9fc9;
+			--ring: rgba(248,204,226,0.6);
+		}
+		a.button {
+  			appearance: none;
+			display: inline-flex;align-items: center;
+  			justify-content: center;
+  			gap: 4px;
+  			border: none;
+  			background: var(--accent);
+  			color: #333;
+  			text-decoration: none;
+  			padding: 6px 8px;
+  			border-radius: 9999px; /* pill/round */
+  			font-weight: 510;
+  			font-size: 1.5rem;
+  			transition: transform 0.08s ease, box-shadow 0.15s ease, background 0.2s ease;
+		}
+		a.button:hover { transform: translateY(-1px); box-shadow: 0 4px 8px rgba(255,159,201,0.25); }
+		a.button:focus-visible {
+  			outline: none;
+  			box-shadow: 0 0 0 2px var(--ring);
+		}
+		.row { display: inline-flex; gap: 40px; margin-top: 15px; }
+		.icon { width: 30px; height: 30px; display: inline-block; }		
     </style>
 		</style>
 	</head>
@@ -62,190 +93,358 @@
 			<section id="one" class="main style2 right dark fullscreen">
 				<div class="content box style2">
 					<p>First, please enjoy this watercolored Northern Flicker if you are viewing this site from your computer. If not, this majestic bird will be covered up by this text box, unfortunately. The Northern Flicker is one of my favorite birds.</p>
-					<p>I am passionate about community-building, climate action, coding, and creating art.</p>
-					<p>My 9-5? I am the data manager at the Sitka Sound Science Center (SSSC), a research field station in Sitka, Alaska. I am grateful to work with a wonderful team of community leaders, scientists, and researchers. I create data visualization products and develop and maintain data management infrastructure including the SSSC GitHub Organization. My project team is working on reducing landslide risk in Southeast Alaska through increasing coordination.</p>
+					<p>Currently, I am a Ph.D. Candidate at the Georgia Institute of Technology in the Ka Moamoa Lab, funded through the National Science Foundation Graduate Research Fellowship Program.</p> 
+					<p>I am exploring how technology, environment, and community entwine.</p>
 				</div>
 			</section>
 
-		<!-- Two -->
-			<section id="two" class="main style2 left dark fullscreen">
-				<div class="content box style2">
-					<div style="display: flex; justify-content: center; align-items: center;">
-						<img src="images/fulls/profile.png" alt="Circular Image" style="width: 150px; height: 150px; border-radius: 150%; object-fit: cover;">
-						<div style="height: 200px;"></div>
-					</div>
-					<header>
-						<h2>Ella Neumann's CV</h2>
-					</header>
-				
-					<section>
-						<h2>Research Interests</h2>
-						<p>Data organization, information science, interagency coordination, environmental science, community-led research solutions, co-production methodologies, and technology engagement.</p>
-					</section>
-				
-					<section>
-						<h2>Work Experience</h2>
-						<h3>Data Manager</h3>
-						<p>Sitka Sound Science Center, Sitka, AK<br>October 2023 - Present</p>
-						<ul>
-							<li>Maintains an environmental monitoring locations map to visualize sensors that bridge topographic and atmospheric data, helping scientists better predict landslides.</li>
-							<li>Collaborates with Tribal governments and corporations, municipalities, state and federal agencies, and researchers throughout the United States to improve data sovereignty and management practices in the geohazard risk reduction space.</li>
-							<li>Organizes and runs a Southeast Alaska Interagency Landslide Working Group to enhance landslide risk reduction coordination efforts.</li>
-						</ul>
-				
-						<h3>Solutions Consultant</h3>
-						<p>Körber Supply Chain, Bellingham, WA<br>May 2022 - August 2023</p>
-						<ul>
-							<li>Designed cutting-edge supply chain solutions for customers globally.</li>
-							<li>Built warehousing technology efficiently using Transact-SQL.</li>
-							<li>Implemented high-quality, customer-facing processes to enhance warehouse coherence.</li>
-						</ul>
-				
-						<h3>Board Member</h3>
-						<p>Shifting Gears, Bellingham, WA<br>September 2021 - 2022</p>
-						<ul>
-							<li>Organized over 40 volunteers to execute a community fundraising event, securing funding for the nonprofit.</li>
-							<li>Applied for grants to fund free events for women in the area.</li>
-							<li>Represented the organization at sea kayaking, mountain biking, and recreational events.</li>
-						</ul>
+<!-- Two -->
+<section id="two" class="main style2 left dark fullscreen">
+	<div class="cv-box">
+	  <div style="text-align: center; margin-bottom: 30px;">
+		<img src="images/fulls/profile.png" 
+			 alt="Circular Image" 
+			 style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px;">
+  
+		<h2>Ella Neumann's CV</h2>
+  
+		<div class="row" role="group" aria-label="CV download and view options" style="justify-content: center;">
+		  <!-- Download -->
+		  <a class="button" href="assets/2025_ella_neumann_cv.pdf" download="2025_ella_neumann_cv.pdf">
+			<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+				 style="width: 20px; height: 20px; flex-shrink: 0;">
+			  <path fill="currentColor" d="M5 20a1 1 0 0 1-1-1v-2h2v1h12v-1h2v2a1 1 0 0 1-1 1H5Zm7-4l-5-5h3V4h4v7h3l-5 5Z"/>
+			</svg>
+			<span>Download</span>
+		  </a>
+  
+		  <!-- View -->
+		  <a class="button" href="assets/2025_ella_neumann_cv.pdf" target="_blank" rel="noopener">
+			<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+				 style="width: 20px; height: 20px; flex-shrink: 0;">
+			  <path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3ZM5 5h6v2H7v10h10v-4h2v6H5V5Z"/>
+			</svg>
+			<span>View</span>
+		  </a>
+		</div>
+	  </div>
+  
+	  <!-- Responsive CV content -->
+	  <div class="cv-columns">
+		<section>
+		  <h2>Research Interests</h2>
+		  <p>Human-centered computing, data organization, information science, interagency coordination, environmental science, community-led research solutions, co-production methodologies, technology engagement, and policy.</p>
+		</section>
+  
+		<section>
+		  <h2>Work Experience</h2>
+		  <h3>Data Manager</h3>
+		  <p>Sitka Sound Science Center, Sitka, AK<br>October 2023 – August 2025</p>
+		  <ul>
+			<li>Principal Investigator for USGS grant ($150K), installing a low-cost, community-maintained rainfall monitoring system in Sitka, Alaska.</li>
+			<li>Creator, chair, and web developer for <a href="https://alaskalandslide.org" target="_blank">alaskalandslide.org</a>.</li>
+			<li>Designed research data infrastructure using Openscapes frameworks.</li>
+			<li>Developed open-source data visualization tools, including an environmental monitoring map bridging topographic and atmospheric data to predict landslides.</li>
+			<li>Iterated upon sitkalandslide.org’s logistic regression model and infrastructure to alert Sitkans about landslide risk.</li>
+			<li>Collaborated globally with Tribes, agencies, municipalities, and researchers to improve data sovereignty and co-produce memoranda of understanding.</li>
+		  </ul>
+  
+		  <h3>Software Engineer</h3>
+		  <p>Körber Supply Chain, Bellingham, WA<br>May 2022 – August 2023</p>
+		  <ul>
+			<li>Built warehousing technology efficiently using Transact-SQL.</li>
+			<li>Designed cutting-edge supply chain solutions for global customers.</li>
+			<li>Implemented high-quality, customer-facing processes to enhance warehouse coherence.</li>
+		  </ul>
+  
+		  <h3>Board Member</h3>
+		  <p>Shifting Gears, Bellingham, WA<br>September 2021 – Present</p>
+		  <ul>
+			<li>Organized 40+ volunteers to execute fundraising events, securing nonprofit funding.</li>
+			<li>Applied for grants to fund free events for women.</li>
+			<li>Represented the organization at recreation events (kayaking, biking, hiking).</li>
+		  </ul>
+  
+		  <h3>Marketing and Outreach Coordinator</h3>
+		  <p>Western Washington University Outdoor Center, Bellingham, WA<br>June 2021 – March 2022</p>
+		  <ul>
+			<li>Increased social media traction by 175% in three months.</li>
+			<li>Created and distributed 2,000+ informational pamphlets, increasing trip turnout by 150%.</li>
+			<li>Tailored events based on student and faculty feedback.</li>
+		  </ul>
+  
+		  <h3>Consulting Intern</h3>
+		  <p>Artemis Connection, Seattle, WA<br>June 2020 – August 2020</p>
+		  <ul>
+			<li>Collaborated with clients on diversity, inclusion, COVID response, and restructuring issues.</li>
+			<li>Created presentations that conveyed meaningful client-driven stories.</li>
+		  </ul>
+  
+		  <h3>Firmware Engineering Intern</h3>
+		  <p>Hewlett-Packard, Vancouver, WA<br>June 2019 – August 2019</p>
+		  <ul>
+			<li>Engineered a Bluetooth Low Energy (BLE) testing system using semiconductors, Python, and C.</li>
+			<li>Developed visualization software to optimize wireless printer setup by tracking throughput and signal strength indices (RSSI).</li>
+		  </ul>
+		</section>
+  
+		<section>
+		  <h2>Awards and Scholarships</h2>
+		  <ul>
+			<li><strong>NSF Graduate Research Fellowship</strong>, Computer Science and Engineering, 2025</li>
+			<li><strong>Computer Science and Math Distinguished Scholar Award</strong> – Western Washington University, 2018–2022</li>
+			<li><strong>Grace Hopper Celebration Full Ride Scholarship</strong> – AnitaB.org, 2020</li>
+			<li><strong>Accenture Innovation Challenge Participant Scholarship</strong> – 2020</li>
+			<li><strong>Best in Class Award</strong> – Hewlett-Packard Internship, 2019</li>
+		  </ul>
+		</section>
+  
+		<section>
+		  <h2>Volunteer Experience</h2>
+		  <h3>Soccer Coach</h3>
+		  <p>Shuksan Middle School, Bellingham, WA, 2023</p>
+		  <ul>
+			<li>Inspired girls’ self-confidence through coaching.</li>
+			<li>Organized uniforms and equipment.</li>
+			<li>Communicated with players in Spanish.</li>
+		  </ul>
+  
+		  <h3>Events Coordinator</h3>
+		  <p>Association for Women in Computer Science, 2018 – 2022</p>
+		  <ul>
+			<li>Hosted think tanks, social gatherings, and career sessions for women in computer science.</li>
+		  </ul>
+  
+		  <h3>Adult Mathematics Tutor</h3>
+		  <p>Whatcom Literacy Council, 2019 – 2022</p>
+		  <ul>
+			<li>Taught English reading and writing weekly.</li>
+			<li>Helped a student progress to community college and GRE prep.</li>
+		  </ul>
+		</section>
+  
+		<section>
+		  <h2>Technical Skills, Training, and Certifications</h2>
+		  <ul>
+			<li>HTML, CSS, JavaScript, Python, Java</li>
+			<li>GIS: QGIS and ArcGIS</li>
+			<li>Data Governance (GitHub organization, research data systems)</li>
+			<li>Interagency collaboration and leadership</li>
+			<li>Working group and meeting facilitation</li>
+			<li>Elementary-level Spanish</li>
+		  </ul>
+		</section>
+  
+		<section>
+		  <h2>Memberships</h2>
+		  <ul>
+			<li>Southeast Alaska Interagency Landslide Working Group – Founder & Chair</li>
+			<li>USGS National Geohazard Working Group</li>
+			<li>Interagency Arctic Research Policy Committee</li>
+			<li>NSF Sustainable Computing for Sustainability Group</li>
+			<li>Climate/Computing Network – Computing Community Consortium</li>
+			<li>Ambassador – National Weather Service Weather-Ready Nation</li>
+		  </ul>
+		</section>
+  
+		<section>
+		  <h2>Grant Writing and Information Dissemination</h2>
+		  <ul>
+			<li>Summary Report, 2024 Southeast Alaska Interagency Landslide Working Group</li>
+			<li>Data Management Plan, NSF Project ($5M)</li>
+			<li>USGS Cooperative Agreement for Landslide Risk Reduction ($150K)</li>
+			<li>White Paper: Data Sharing Agreements and MOUs</li>
+		  </ul>
+		</section>
+  
+		<section>
+		  <h2>Presentations</h2>
+		  <ul>
+			<li>Sustainable Computing for Sustainability Conference, 2024</li>
+			<li>USGS Environmental Monitoring Grant Review, 2024</li>
+			<li>NSF Data Management Plan – Ḵutí Project, 2024</li>
+			<li>Yakutat Tlingit Tribal Council – Ḵutí Project, 2024</li>
+			<li>Southeast Alaska Interagency Landslide Working Group, 2024</li>
+			<li>USGS National Landslide Working Group, 2024</li>
+			<li>Southeast Alaska Area Contingency Plan (SEAK ACP), 2024</li>
+			<li>Klawock Cooperative Association – Landslide Risk Presentation, 2024</li>
+			<li>Organized Village of Kasaan – Landslide Risk Presentation, 2024</li>
+			<li>Hydaburg Cooperative Association – Landslide Risk Presentation, 2024</li>
+			<li>Craig Tribal Association – Landslide Risk Presentation, 2024</li>
+		  </ul>
+		</section>
+  
+		<section>
+		  <h2>Education</h2>
+		  <p><strong>PhD in Computer Science</strong><br>
+		  Georgia Institute of Technology, Atlanta, GA<br>
+		  August 2025 – Present</p>
+  
+		  <p><strong>B.S. in Computer Science</strong><br>
+		  Western Washington University, Bellingham, WA<br>
+		  September 2018 – March 2022<br>
+		  GPA: 3.5<br>
+		  Mathematics and Computer Science Scholars Program</p>
+		</section>
+	  </div>
+	</div>
+  </section>
+  
+  <style>
+  .cv-box {
+	background: #fff;
+	color: #000;
+	width: 95%;
+	max-width: 1600px;
+	margin: 0 auto;
+	padding: 60px;
+	border-radius: 18px;
+	box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+	position: relative;
+	z-index: 2;
+  }
+  
+  .cv-columns {
+	column-count: 3;
+	column-gap: 50px;
+  }
+  
+  .cv-columns section {
+	break-inside: avoid;
+	margin-bottom: 25px;
+  }
+  
+  /* Tablet */
+  @media (max-width: 1024px) {
+	.cv-columns {
+	  column-count: 2;
+	}
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+	.cv-columns {
+	  column-count: 1;
+	}
+  }
+  </style>
+		
+<!-- Website Creation Workshop Section -->
+<section id="three" style="background: url('images/test.png') no-repeat center center; background-size: cover; padding: 60px 20px;">
+	<div style="max-width: 900px; margin: 0 auto; background-color: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+	  
+	  <header>
+		<h2>Why build your own website?</h2>
+		<p>Creating your personal open-source website is not only a form of artistic expression; it is also a form of resistance and a direct act of bodily autonomy. You own your domain, your website, your words, your data. You are using your technology as a tool; no one behind the screen is using you.</p>
+	  </header>
+  
+	  <p>
+		This is an abridged version of a website-making workshop that I hosted for my buddies to create their own free, open-source websites to share their work with the world.  
+		You can read more in my original <a href="https://www.linkedin.com/feed/update/urn:li:activity:7300061241773891584/" target="_blank">LinkedIn post</a>.  
+	  </p>
+  
+	  <p>
+		Here’s a tutorial to get you started building the website of your dreams; get wild:
+	  </p>
+  
+	  <h1 style="margin-top: 30px;">Website Creation Workshop</h1>
+  
+	  <h3>Step 1: Create a GitHub Account</h3>
+	  <ul>
+		<li>Go to <a href="https://github.com/" target="_blank">GitHub</a> and sign up for an account.</li>
+		<li>Verify your email address.</li>
+	  </ul>
+  
+	  <h3>Step 2: Download an HTML and CSS template</h3>
+	  <ul>
+		<li>Visit a site such as <a href="https://html5up.net/" target="_blank">HTML5 UP</a>.</li>
+		<li>Choose a template you like and click "Download".</li>
+		<li>Extract the downloaded <code>.zip</code> file on your computer.</li>
+	  </ul>
+  
+	  <h3>Step 3: Create a New GitHub Repository</h3>
+	  <ul>
+		<li>Log in to GitHub and click the <strong>+</strong> icon (top right), then select <strong>New repository</strong>.</li>
+		<li>Name it <code>yourname.github.io</code> (replace <code>yourname</code> with your GitHub username).</li>
+		<li>Set it to <strong>Public</strong> and click <strong>Create repository</strong>.</li>
+	  </ul>
+  
+	  <h3>Step 4: Upload the Website Files to GitHub</h3>
+	  <ul>
+		<li>In your new repository, click <strong>Upload files</strong>.</li>
+		<li>Drag and drop all extracted files from your HTML5 UP template.</li>
+		<li>Click <strong>Commit changes</strong> to save.</li>
+	  </ul>
+  
+	  <h3>Step 5: Enable GitHub Pages</h3>
+	  <ul>
+		<li>Go to <strong>Settings</strong> &gt; <strong>Pages</strong>.</li>
+		<li>Under <strong>Branch</strong>, select <code>main</code> and click <strong>Save</strong>.</li>
+		<li>Your site will be available at <code>https://yourname.github.io/</code> in a few minutes!</li>
+	  </ul>
+  
+	  <h3>Step 6: Customize Your Website</h3>
+	  <ul>
+		<li> - Edit the <code>index.html</code> file directly in GitHub or using a code editor like VS Code.</li>
+		<li> - Modify the text, links, and images to personalize your site.</li>
+		<li> - Commit changes to update your website live.</li>
+	  </ul>
 
-						<h3>Marketing and Outreach Coordinator</h3>
-						<p>Western Washington University Outdoor Center, Bellingham, WA<br>June 2021 - March 2022</p>
-						<ul>
-							<li>Organized over 40 volunteers to execute a community fundraising event, securing funding for the nonprofit.</li>
-							<li>Applied for grants to fund free events for women in the area.</li>
-							<li>Represented the organization at sea kayaking, mountain biking, and recreational events.</li>
-						</ul>	
-						
-						<h3>Consulting Intern</h3>
-						<p>Artemis Connection, Seattle, WA<br>June 2020 - August 2020</p>
-						<ul>
-							<li>Collaborated with clients to address complex diversity, inclusion, COVID response, and organizational restructuring issues.</li>
-							<li>Created powerful presentations that conveyed meaningful stories based on customer needs.</li>
-						</ul>
-
-						<h3>Firmware Engineering Intern</h3>
-						<p>Hewlett Packard, Vancouver, WA<br>June 2019 - August 2019</p>
-						<ul>
-							<li>Engineered a Bluetooth Low Energy (BLE) testing system using semiconductors, Python, and C.</li>
-							<li>Developed data visualization software to optimize wireless printer setup by tracking throughput and registered signal strength indices (RSSI).</li>
-						</ul>
-					</section>
-				
-					<section>
-						<h2>Awards and Scholarships</h2>
-						<ul>
-							<li><strong>Computer Science and Math Distinguished Scholar Award</strong> – Western Washington University, 2018-2022</li>
-							<li><strong>Grace Hopper Celebration of Women in Computing Full Ride Scholarship</strong> – Sponsored by AnitaB.org, 2020</li>
-							<li><strong>Accenture Innovation Challenge Participant Scholarship</strong> – 2020</li>
-							<li><strong>Best in Class Award</strong> – Hewlett Packard Internship, Vancouver, WA, 2019</li>
-						</ul>
-					</section>
-				
-					<section>
-						<h2>Technical Skills, Training, and Certifications</h2>
-						<ul>
-							<li>HTML, CSS, JavaScript, Python, Java</li>
-							<li>Geographic Information System (GIS) including QGIS and ArcGIS</li>
-							<li>Data Governance, including creating data infrastructure for the Sitka Sound Science Center research department (GitHub organization, data management system)</li>
-							<li>Interagency relationship building and leadership, collaborating with local Tribal Governments, regional Tribal Governments, Tribal corporations, U.S. National Weather Service, U.S. Forest Service, U.S. Geological Survey, Alaska Division of Geological & Geophysical Surveys, universities, RAND Corporation, FEMA, Legislative Representatives, Red Cross, local municipalities, and more</li>
-							<li>Working group and meeting facilitation</li>
-							<li>Elementary-level Spanish speaking</li>
-						</ul>
-					</section>
-				
-					<section>
-						<h2>Memberships</h2>
-						<ul>
-							<li>Southeast Alaska Interagency Landslide Working Group, Founder, Organizer, and Chair</li>
-							<li>USGS National Geohazard Working Group</li>
-							<li>Interagency Arctic Research Policy Committee</li>
-							<li>National Science Foundation Sustainable Computing for Sustainability Group</li>
-							<li>Climate/Computing Network - Computing Community Consortium</li>
-							<li>Ambassador for National Weather Service Weather-Ready Nation </li>
-						</ul>
-					</section>
-				
-					<section>
-						<h2>Grant Writing and Information Dissemination</h2>
-						<ul>
-							<li>Summary Report, 2024 Southeast Alaska Interagency Landslide Working Group</li>
-							<li>Data Management Plan, NSF Granted Project ($5M)</li>
-							<li>USGS Cooperative Agreement for Landslide Risk Reduction Information Dissemination, Duplication Prevention, and Infrastructure Maintenance ($150K)</li>
-							<li>White Paper: Designing Data Sharing Agreements and Memorandum of Understandings with partner agencies</li>
-						</ul>
-					</section>
-
-					<section>
-						<h2>Volunteer Experience</h2>
-						<h3>Soccer Coach</h3>
-						<p>Shuksan Middle School, Bellingham WA, 2023</p>
-
-					</section>
-					
-					<section>
-						<h2>Education</h2>
-						<p><strong>B.S. in Computer Science</strong><br>
-						Western Washington University, Bellingham, WA<br>
-						September 2018 – March 2022<br>
-						Overall GPA: 3.5</p>
-						<p>Mathematics and Computer Science Scholars Program</p>
-					</section>
-				
-				</div>
-			</section>
-
-			<!-- Three -->
-			<section id="three" class="main style2 right dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2>Are you interested in creating and hosting your own website?</h2>
-						<p>You're in the right place.</p>
-					</header>
-					<h1>Website Creation Workshop</h1>
-    
-					<h2>Step 1: Create a GitHub Account</h2>
-					<ul>
-						<li>Go to <a href="https://github.com/" target="_blank">GitHub</a> and sign up for an account.</li>
-						<li>Verify your email address.</li>
-					</ul>
-					
-					<h2>Step 2: Download an HTML and CSS template</h2>
-					<ul>
-						<li>Visit a site such as <a href="https://html5up.net/" target="_blank">HTML5 UP</a>.</li>
-						<li>Choose a template you like and click "Download".</li>
-						<li>Extract the downloaded <code>.zip</code> file on your computer.</li>
-					</ul>
-					
-					<h2>Step 3: Create a New GitHub Repository</h2>
-					<ul>
-						<li>Log in to GitHub and click the <strong>+</strong> icon (top right), then select <strong>New repository</strong>.</li>
-						<li>Name it <code>yourname.github.io</code> (replace <code>yourname</code> with your GitHub username).</li>
-						<li>Set it to <strong>Public</strong> and click <strong>Create repository</strong>.</li>
-					</ul>
-					
-					<h2>Step 4: Upload the Website Files to GitHub</h2>
-					<ul>
-						<li>In your new repository, click <strong>Upload files</strong>.</li>
-						<li>Drag and drop all extracted files from your HTML5 UP template.</li>
-						<li>Click <strong>Commit changes</strong> to save.</li>
-					</ul>
-					
-					<h2>Step 5: Enable GitHub Pages</h2>
-					<ul>
-						<li>Go to <strong>Settings</strong> > <strong>Pages</strong>.</li>
-						<li>Under <strong>Branch</strong>, select <code>main</code> and click <strong>Save</strong>.</li>
-						<li>Your site will be available at <code>https://yourname.github.io/</code> in a few minutes!</li>
-					</ul>
-					
-					<h2>Step 6: Customize Your Website</h2>
-					<ul>
-						<li>Edit the <code>index.html</code> file directly in GitHub or using a code editor like VS Code.</li>
-						<li>Modify the text, links, and images to personalize your site.</li>
-						<li>Commit changes to update your website live!</li>
-				</div>
-			</section>
-
+	  	<h3>Tips</h3>
+	<ul>
+	  <li>AI tools such as ChatGPT are a great resource to generate code for your side. For this website for example, I took a template and then edited it by producing ChatGPT code for elements such as formatting, resume download, and identifying bugs.</li>
+	  <li>Listen to some of your favorite tunes as you work on creating your dream website! I'm a huge NPR Tiny Desk fan myself.</li>
+	  <li>Look at some other websites for inspiration.</li>
+	</ul>
+	</div>
+  </section>
+  
+  <!-- Responsive Styling -->
+  <style>
+	@media (max-width: 1024px) {
+	  section#three div {
+		padding: 30px;
+	  }
+	}
+  
+	@media (max-width: 768px) {
+	  section#three div {
+		padding: 20px;
+	  }
+  
+	  section#three h1 {
+		font-size: 1.8rem;
+	  }
+  
+	  section#three h2 {
+		font-size: 1.4rem;
+	  }
+  
+	  section#three p, section#three li {
+		font-size: 1rem;
+	  }
+	}
+  
+	@media (max-width: 480px) {
+	  section#three div {
+		padding: 15px;
+	  }
+  
+	  section#three h1 {
+		font-size: 1.5rem;
+	  }
+  
+	  section#three h2 {
+		font-size: 1.2rem;
+	  }
+  
+	  section#three p, section#three li {
+		font-size: 0.95rem;
+	  }
+	}
+  </style>
+  
+  
 					<!-- Gallery  -->
 <!-- 
 

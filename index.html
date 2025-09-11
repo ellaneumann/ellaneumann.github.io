@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE HTML> 
 <!--
 	Original format adapted from html5up.net | @ajlkn and iterated upon with ChatGPT and coding by Ella Neumann
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
@@ -13,54 +13,100 @@
 
 		<style>
 			hmain {
-				transform: rotate(10deg); /* Tilts the text */
-            	display: inline-block; /* Keeps the rotation confined to the text */
+				transform: rotate(10deg);
+            	display: inline-block;
 				color: inherit;
 				font-size: 1.75em;
 				line-height: 1.25em;
-				/*letter-spacing: 0.05em; */
-				margin-bottom: 50px; /* Moves the text down */
+				margin-bottom: 50px;
 				margin-left: 1.75cm; 
 			}
-			<style>
-        .circle-img {
-            width: 100px; /* Adjust size as needed */
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-		:root {
-  			--bg: #0b0f19;
-  			--card: #121826;
-			--text: #e6edf6;
-  			--muted: #9fb0c9;
-			--accent: #f8cce2; /* light pink */
-			--accent-strong: #ff9fc9;
-			--ring: rgba(248,204,226,0.6);
-		}
-		a.button {
-  			appearance: none;
-			display: inline-flex;align-items: center;
-  			justify-content: center;
-  			gap: 4px;
-  			border: none;
-  			background: var(--accent);
-  			color: #333;
-  			text-decoration: none;
-  			padding: 6px 8px;
-  			border-radius: 9999px; /* pill/round */
-  			font-weight: 510;
-  			font-size: 1.5rem;
-  			transition: transform 0.08s ease, box-shadow 0.15s ease, background 0.2s ease;
-		}
-		a.button:hover { transform: translateY(-1px); box-shadow: 0 4px 8px rgba(255,159,201,0.25); }
-		a.button:focus-visible {
-  			outline: none;
-  			box-shadow: 0 0 0 2px var(--ring);
-		}
-		.row { display: inline-flex; gap: 40px; margin-top: 15px; }
-		.icon { width: 30px; height: 30px; display: inline-block; }		
-    </style>
+			.circle-img {
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+				object-fit: cover;
+				margin-bottom: 20px;
+			}
+			:root {
+				--bg: #0b0f19;
+				--card: #121826;
+				--text: #e6edf6;
+				--muted: #9fb0c9;
+				--accent: #f8cce2; /* light pink */
+				--accent-strong: #ff9fc9;
+				--ring: rgba(248,204,226,0.6);
+			}
+			a.button {
+				appearance: none;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				gap: 4px;
+				border: none;
+				background: var(--accent);
+				color: #333;
+				text-decoration: none;
+				padding: 6px 8px;
+				border-radius: 9999px;
+				font-weight: 510;
+				font-size: 1.5rem;
+				transition: transform 0.08s ease, box-shadow 0.15s ease, background 0.2s ease;
+			}
+			a.button:hover { 
+				transform: translateY(-1px); 
+				box-shadow: 0 4px 8px rgba(255,159,201,0.25); 
+			}
+			a.button:focus-visible {
+				outline: none;
+				box-shadow: 0 0 0 2px var(--ring);
+			}
+			.row { display: inline-flex; gap: 40px; margin-top: 15px; }
+			.icon { width: 30px; height: 30px; display: inline-block; }
+
+			/* Responsive image and button sizing */
+			@media (max-width: 1024px) {
+				.circle-img {
+					width: 120px;
+					height: 120px;
+				}
+				a.button {
+					font-size: 1.3rem;
+					padding: 6px 12px;
+				}
+				.icon {
+					width: 22px;
+					height: 22px;
+				}
+			}
+			@media (max-width: 768px) {
+				.circle-img {
+					width: 100px;
+					height: 100px;
+				}
+				a.button {
+					font-size: 1.1rem;
+					padding: 5px 10px;
+				}
+				.icon {
+					width: 20px;
+					height: 20px;
+				}
+			}
+			@media (max-width: 480px) {
+				.circle-img {
+					width: 80px;
+					height: 80px;
+				}
+				a.button {
+					font-size: 1rem;
+					padding: 4px 8px;
+				}
+				.icon {
+					width: 18px;
+					height: 18px;
+				}
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -73,7 +119,6 @@
 						<li><a href="#intro">Hi There.</a></li>
 						<li><a href="#one">About</a></li>
 						<li><a href="#two">CV</a></li>
-						<!-- <li><a href="#gallery">Art</a></li> --> 
 						<li><a href="#three">Code</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
@@ -104,15 +149,14 @@
 	  <div style="text-align: center; margin-bottom: 30px;">
 		<img src="images/fulls/profile.png" 
 			 alt="Circular Image" 
-			 style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px;">
+			 class="circle-img">
   
 		<h2>Ella Neumann's CV</h2>
   
 		<div class="row" role="group" aria-label="CV download and view options" style="justify-content: center;">
 		  <!-- Download -->
 		  <a class="button" href="assets/2025_ella_neumann_cv.pdf" download="2025_ella_neumann_cv.pdf">
-			<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
-				 style="width: 20px; height: 20px; flex-shrink: 0;">
+			<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 			  <path fill="currentColor" d="M5 20a1 1 0 0 1-1-1v-2h2v1h12v-1h2v2a1 1 0 0 1-1 1H5Zm7-4l-5-5h3V4h4v7h3l-5 5Z"/>
 			</svg>
 			<span>Download</span>
@@ -120,8 +164,7 @@
   
 		  <!-- View -->
 		  <a class="button" href="assets/2025_ella_neumann_cv.pdf" target="_blank" rel="noopener">
-			<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
-				 style="width: 20px; height: 20px; flex-shrink: 0;">
+			<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 			  <path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3ZM5 5h6v2H7v10h10v-4h2v6H5V5Z"/>
 			</svg>
 			<span>View</span>

@@ -107,6 +107,58 @@
 					height: 18px;
 				}
 			}
+			    #contact {
+      position: relative;
+      background-image: url('images/four.png'); /* adjust path as needed */
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      padding: 4rem 1rem;
+      color: #fff;
+      min-height: 420px; /* ensures you can see the background */
+      overflow: hidden;
+    }
+
+    /* optional dark overlay so text stays readable */
+    #contact::before {
+      content: "";
+      position: absolute;
+      inset: 0;                 /* top:0; left:0; right:0; bottom:0; */
+      background: rgba(0,0,0,0.35);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* bring content above overlay */
+    #contact .content {
+      position: relative;
+      z-index: 1;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    /* the translucent form card */
+    #contact .box {
+      background: #ffffff; /* solid white, no transparency */
+      color: #111;
+      border-radius: 0px;
+      padding: 2rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      max-width: 720px;
+      margin: 1.5rem auto;
+    }
+
+    /* small responsive tweaks */
+    .fields { display: grid; gap: 1rem; }
+    .field.half { width: 100%; }
+    input[type="text"], input[type="email"], textarea {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    .actions { text-align: right; margin-top: 1rem; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -265,27 +317,27 @@
   }
 </style>
 
-		<!-- Contact -->
-			<section id="contact" class="main style3 secondary">
-				<div class="content">
-					<header>
-						<h2>Say Hello.</h2>
-						<p></p>
-					</header>
-					<div class="box">
-						<form method="post" action="https://formspree.io/f/xkggvjzl">
-							<div class="fields">
-								<div class="field half"><input type="text" name="name" placeholder="Name" /></div>
-								<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
-								<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
-							</div>
-							<ul class="actions special">
-								<li><input type="submit" value="Send Message" /></li>
-							</ul>
-						</form>
-					</div>
-				</div>
-			</section>
+  <!-- Contact -->
+  <section id="contact" class="main style3 secondary">
+    <div class="content">
+      <header>
+        <h2>Say Hello.</h2>
+        <p></p>
+      </header>
+      <div class="box">
+        <form method="post" action="https://formspree.io/f/xkggvjzl">
+          <div class="fields">
+            <div class="field half"><input type="text" name="name" placeholder="Name" /></div>
+            <div class="field half"><input type="email" name="email" placeholder="Email" /></div>
+            <div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+          </div>
+          <ul class="actions special">
+            <li><input type="submit" value="Send Message" /></li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </section>
 
 		<!-- Footer -->
 			<footer id="footer">
